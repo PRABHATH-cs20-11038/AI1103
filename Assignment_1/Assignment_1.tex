@@ -164,24 +164,24 @@ X = \sum\limits_{i=1}^{n}X_i
 
 where n is the total number of coins tossed. Then $X$ has a Binomial Distribution. Then for 
 \begin{align}
-    p_{X_i}(n) {\stackrel{Z}{\rightleftharpoons}} P_{X_i}(z)
+    \pr{X_i=n} {\stackrel{Z}{\rightleftharpoons}} \pr{X_i=z}
 \end{align}
 
 yielding
 \begin{align}
-    P_{X_i}(z) = 1-p+p z^{-1}
+    \pr{X_i=z} = 1-p+p z^{-1}
 \end{align}
 
 with using the fact that $X_i$ are i.i.d.,
 \begin{align}
 \begin{split}
-    P_X(z) &= (1-p+p z^{-1})^n\\
+    \pr{X=z} &= (1-p+p z^{-1})^n\\
     &=\sum\limits_{k=0}^n{^n C_k}p^k(1-p)^{n-k}z^{-k}
 \end{split}
 \end{align}
 
 \begin{align}
-   p_X(k) =
+   \pr{X=k} =
   \begin{cases*}
     {^n C_k}p^{k}(1-p)^{n-k} & $0 \leq k \leq n$\\
       0 & otherwise
@@ -198,7 +198,7 @@ Here we are seeing outcome of two tosses of a coin. We can say it as simultaneou
 Now we obtain probability distribution of number of heads of two coins from (2.0.6),
 
 \begin{align*}
-   p_X(k) =
+   \pr{X=k} =
   \begin{cases*}
     {^2 C_k}(\frac{1}{2})^{k}(1-\frac{1}{2})^{2-k} & $0 \leq k \leq 2$\\
     0 & otherwise
@@ -206,7 +206,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \end{align*}
 
 \begin{align}
-   p_X(k) =
+   \pr{X=k} =
   \begin{cases*}
     {^2 C_k}(\frac{1}{2})^{2} \quad& if $0 \leq k \leq 2$ \\
     0 \quad& otherwise
@@ -216,7 +216,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 probability of getting 0 heads,
 \begin{align}
     \begin{split}
-    P_X(0) &= {^2C_0}(\frac{1}{2})^2\\
+    \pr{X=0} &= {^2C_0}(\frac{1}{2})^2\\
     &=1.\frac{1}{4}\\
     &=\frac{1}{4}
     \end{split}
@@ -225,7 +225,7 @@ probability of getting 0 heads,
 probability of getting 1 heads,
 \begin{align}
     \begin{split}
-    P_X(1) &= {^2C_1}(\frac{1}{2})^2\\
+    \pr{X=1} &= {^2C_1}(\frac{1}{2})^2\\
     &=2.\frac{1}{4}\\
     &=\frac{1}{2}
     \end{split}
@@ -234,7 +234,7 @@ probability of getting 1 heads,
 probability of getting 2 heads,
 \begin{align}
     \begin{split}
-    P_X(2) &= {^2C_2}(\frac{1}{2})^2\\
+    \pr{X=2} &= {^2C_2}(\frac{1}{2})^2\\
     &=1.\frac{1}{4}\\
     &=\frac{1}{4}
     \end{split}
@@ -256,6 +256,8 @@ probability of getting 2 heads,
 
 \subsection{(ii)}
 
+Let $X'_i=1-X_i$, where in $X'_i \in {0,1}$ here 1 denotes outcome as tail.
+
 With respect to tails the parameter would change to 
 \begin{align}
     q=1-p=\frac{1}{2}
@@ -263,7 +265,7 @@ With respect to tails the parameter would change to
 
 and there will be a small change in binomial distribution (2.0.6) and we get binomial distribution for tails as,
 \begin{align}
-   p_{1-X}(k) =
+   \pr{X'=k} =
   \begin{cases*}
     {^n C_k}q^{k}(1-q)^{n-k} & $0 \leq k \leq n$\\
       0 & otherwise
@@ -278,7 +280,7 @@ Here we are seeing outcome of simultaneous tosses of three coin. So, we get,
 Now we obtain probability distribution of number of tails of three coins from (2.2.2),
 
 \begin{align*}
-   p_{1-X}(k) =
+   \pr{X'=k} =
   \begin{cases*}
     {^3 C_k}(\frac{1}{2})^{k}(1-\frac{1}{2})^{3-k} & $0 \leq k \leq 3$\\
     0 & otherwise
@@ -286,7 +288,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \end{align*}
 
 \begin{align}
-   p_{1-X}(k) =
+   \pr{X'=k} =
   \begin{cases*}
     {^3 C_k}(\frac{1}{2})^{3} \quad& if $0 \leq k \leq 3$ \\
     0 \quad& otherwise
@@ -303,7 +305,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 probability of getting 0 tails,
 \begin{align}
     \begin{split}
-    P_{1-X}(0) &= {^3C_0}(\frac{1}{2})^3\\
+    \pr{X'=0} &= {^3C_0}(\frac{1}{2})^3\\
     &=1.\frac{1}{8}\\
     &=\frac{1}{8}
     \end{split}
@@ -312,7 +314,7 @@ probability of getting 0 tails,
 probability of getting 1 tails,
 \begin{align}
     \begin{split}
-    P_{1-X}(1) &= {^3C_1}(\frac{1}{2})^3\\
+    \pr{X'=1} &= {^3C_1}(\frac{1}{2})^3\\
     &=3.\frac{1}{8}\\
     &=\frac{3}{8}
     \end{split}
@@ -321,7 +323,7 @@ probability of getting 1 tails,
 probability of getting 2 tails,
 \begin{align}
     \begin{split}
-    P_{1-X}(2) &= {^3C_2}(\frac{1}{2})^3\\
+    \pr{X'=2} &= {^3C_2}(\frac{1}{2})^3\\
     &=3.\frac{1}{8}\\
     &=\frac{3}{8}
     \end{split}
@@ -330,7 +332,7 @@ probability of getting 2 tails,
 probability of getting 3 tails,
 \begin{align}
     \begin{split}
-    P_{1-X}(3) &= {^3C_3}(\frac{1}{2})^3\\
+    \pr{X'=3} &= {^3C_3}(\frac{1}{2})^3\\
     &=1.\frac{1}{8}\\
     &=\frac{1}{8}
     \end{split}
@@ -355,7 +357,7 @@ Here we are seeing outcome of four tosses of a coin. We can say it as simultaneo
 Now we obtain probability distribution of number of heads of two coins from (2.0.6),
 
 \begin{align*}
-   p_X(k) =
+   \pr{X=k} =
   \begin{cases*}
     {^4 C_k}(\frac{1}{2})^{k}(1-\frac{1}{2})^{4-k} & $0 \leq k \leq 4$\\
     0 & otherwise
@@ -363,7 +365,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \end{align*}
 
 \begin{align}
-   p_X(k) =
+   \pr{X=k} =
   \begin{cases*}
     {^4 C_k}(\frac{1}{2})^{4} \quad& if $0 \leq k \leq 4$ \\
     0 \quad& otherwise
@@ -380,7 +382,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 probability of getting 0 tails,
 \begin{align}
     \begin{split}
-    P_{X}(0) &= {^4C_0}(\frac{1}{2})^4\\
+    \pr{X=0} &= {^4C_0}(\frac{1}{2})^4\\
     &=1.\frac{1}{16}\\
     &=\frac{1}{16}
     \end{split}
@@ -389,7 +391,7 @@ probability of getting 0 tails,
 probability of getting 1 tails,
 \begin{align}
     \begin{split}
-    P_{X}(1) &= {^4C_1}(\frac{1}{2})^4\\
+    \pr{X=1} &= {^4C_1}(\frac{1}{2})^4\\
     &=4.\frac{1}{16}\\
     &=\frac{1}{4}
     \end{split}
@@ -398,7 +400,7 @@ probability of getting 1 tails,
 probability of getting 2 tails,
 \begin{align}
     \begin{split}
-    P_{X}(2) &= {^4C_2}(\frac{1}{2})^4\\
+    \pr{X=2} &= {^4C_2}(\frac{1}{2})^4\\
     &=6.\frac{1}{16}\\
     &=\frac{3}{8}
     \end{split}
@@ -414,7 +416,7 @@ probability of getting 2 tails,
 probability of getting 3 tails,
 \begin{align}
     \begin{split}
-    P_{X}(3) &= {^4C_3}(\frac{1}{2})^4\\
+    \pr{X=3} &= {^4C_3}(\frac{1}{2})^4\\
     &=4.\frac{1}{16}\\
     &=\frac{1}{4}
     \end{split}
@@ -423,7 +425,7 @@ probability of getting 3 tails,
 probability of getting 4 tails,
 \begin{align}
     \begin{split}
-    P_{X}(4) &= {^4C_4}(\frac{1}{2})^4\\
+    \pr{X=4} &= {^4C_4}(\frac{1}{2})^4\\
     &=1.\frac{1}{16}\\
     &=\frac{1}{16}
     \end{split}
