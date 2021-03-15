@@ -30,6 +30,7 @@
 \usepackage{graphicx}
 \usepackage{tkz-euclide}
 \usepackage[rightcaption]{sidecap}
+\usepackage{enumerate}
 
 \usepackage{graphicx} 
 \graphicspath{ {images/} }
@@ -188,8 +189,9 @@ with using the fact that $X_i$ are i.i.d.,
   \end{cases*}
 \end{align}
 
-\subsection{(i)}
+\begin{enumerate}[(i)]
 
+\item
 Here we are seeing outcome of two tosses of a coin. We can say it as simultaneous tossing two coins. So, we get,
 \begin{align}
     n=2
@@ -213,32 +215,35 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
   \end{cases*}
 \end{align}
 
-probability of getting 0 heads,
-\begin{align}
-    \begin{split}
-    \pr{X=0} &= {^2C_0}(\frac{1}{2})^2\\
-    &=1.\frac{1}{4}\\
-    &=\frac{1}{4}
-    \end{split}
-\end{align}
 
-probability of getting 1 heads,
-\begin{align}
-    \begin{split}
-    \pr{X=1} &= {^2C_1}(\frac{1}{2})^2\\
-    &=2.\frac{1}{4}\\
-    &=\frac{1}{2}
-    \end{split}
-\end{align}
+\begin{enumerate}[(a)]
+    \item probability of getting 0 heads,
+        \begin{align}
+            \begin{split}
+                \pr{X=0} &= {^2C_0}(\frac{1}{2})^2\\
+                &=1.\frac{1}{4}\\
+                &=\frac{1}{4}
+            \end{split}
+        \end{align}
 
-probability of getting 2 heads,
-\begin{align}
-    \begin{split}
-    \pr{X=2} &= {^2C_2}(\frac{1}{2})^2\\
-    &=1.\frac{1}{4}\\
-    &=\frac{1}{4}
-    \end{split}
-\end{align}
+    \item probability of getting 1 heads,
+        \begin{align}
+            \begin{split}
+                \pr{X=1} &= {^2C_1}(\frac{1}{2})^2\\
+                &=2.\frac{1}{4}\\
+                &=\frac{1}{2}
+            \end{split}
+        \end{align}
+
+    \item probability of getting 2 heads,
+        \begin{align}
+            \begin{split}
+                \pr{X=2} &= {^2C_2}(\frac{1}{2})^2\\
+                &=1.\frac{1}{4}\\
+                &=\frac{1}{4}
+            \end{split}
+        \end{align}
+\end{enumerate}
 
 \begin{figure}[h!]
     \centering
@@ -254,7 +259,7 @@ probability of getting 2 heads,
     \label{fig:Two coins}
 \end{figure}
 
-\subsection{(ii)}
+\item
 
 Let $X'_i=1-X_i$, where in $X'_i \in {0,1}$ here 1 denotes outcome as tail.
 
@@ -302,41 +307,43 @@ Now we obtain probability distribution of number of tails of three coins from (2
     \label{fig:Table_2}
 \end{figure}
 
-probability of getting 0 tails,
-\begin{align}
-    \begin{split}
-    \pr{X'=0} &= {^3C_0}(\frac{1}{2})^3\\
-    &=1.\frac{1}{8}\\
-    &=\frac{1}{8}
-    \end{split}
-\end{align}
+\begin{enumerate}[(a)]
+\item probability of getting 0 tails,
+    \begin{align}
+        \begin{split}
+            \pr{X'=0} &= {^3C_0}(\frac{1}{2})^3\\
+            &=1.\frac{1}{8}\\
+            &=\frac{1}{8}
+        \end{split}
+    \end{align}
 
-probability of getting 1 tails,
-\begin{align}
-    \begin{split}
-    \pr{X'=1} &= {^3C_1}(\frac{1}{2})^3\\
-    &=3.\frac{1}{8}\\
-    &=\frac{3}{8}
-    \end{split}
-\end{align}
+\item probability of getting 1 tails,
+    \begin{align}
+        \begin{split}
+            \pr{X'=1} &= {^3C_1}(\frac{1}{2})^3\\
+            &=3.\frac{1}{8}\\
+            &=\frac{3}{8}
+        \end{split}
+    \end{align}
 
-probability of getting 2 tails,
-\begin{align}
-    \begin{split}
-    \pr{X'=2} &= {^3C_2}(\frac{1}{2})^3\\
-    &=3.\frac{1}{8}\\
-    &=\frac{3}{8}
-    \end{split}
-\end{align}
+\item probability of getting 2 tails,
+    \begin{align}
+        \begin{split}
+            \pr{X'=2} &= {^3C_2}(\frac{1}{2})^3\\
+            &=3.\frac{1}{8}\\
+            &=\frac{3}{8}
+        \end{split}
+    \end{align}
 
-probability of getting 3 tails,
-\begin{align}
-    \begin{split}
-    \pr{X'=3} &= {^3C_3}(\frac{1}{2})^3\\
-    &=1.\frac{1}{8}\\
-    &=\frac{1}{8}
-    \end{split}
-\end{align}
+\item probability of getting 3 tails,
+    \begin{align}
+        \begin{split}
+            \pr{X'=3} &= {^3C_3}(\frac{1}{2})^3\\
+            &=1.\frac{1}{8}\\
+            &=\frac{1}{8}
+        \end{split}
+    \end{align}
+\end{enumerate}
 
 \begin{figure}[h!]
     \centering
@@ -347,7 +354,7 @@ probability of getting 3 tails,
 
 
 
-\subsection{(iii)}
+\item
 
 Here we are seeing outcome of four tosses of a coin. We can say it as simultaneous tossing four coins. So, we get,
 \begin{align}
@@ -379,32 +386,52 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \label{fig:Table_3}
 \end{figure}
 
-probability of getting 0 tails,
-\begin{align}
-    \begin{split}
-    \pr{X=0} &= {^4C_0}(\frac{1}{2})^4\\
-    &=1.\frac{1}{16}\\
-    &=\frac{1}{16}
-    \end{split}
-\end{align}
+\begin{enumerate}[(a)]
+    \item probability of getting 0 tails,
+        \begin{align}
+            \begin{split}
+                \pr{X=0} &= {^4C_0}(\frac{1}{2})^4\\
+                &=1.\frac{1}{16}\\
+                &=\frac{1}{16}
+            \end{split}
+        \end{align}
 
-probability of getting 1 tails,
-\begin{align}
-    \begin{split}
-    \pr{X=1} &= {^4C_1}(\frac{1}{2})^4\\
-    &=4.\frac{1}{16}\\
-    &=\frac{1}{4}
-    \end{split}
-\end{align}
+    \item probability of getting 1 tails,
+        \begin{align}
+            \begin{split}
+                \pr{X=1} &= {^4C_1}(\frac{1}{2})^4\\
+                &=4.\frac{1}{16}\\
+                &=\frac{1}{4}
+            \end{split}
+        \end{align}
 
-probability of getting 2 tails,
-\begin{align}
-    \begin{split}
-    \pr{X=2} &= {^4C_2}(\frac{1}{2})^4\\
-    &=6.\frac{1}{16}\\
-    &=\frac{3}{8}
-    \end{split}
-\end{align}
+    \item probability of getting 2 tails,
+        \begin{align}
+            \begin{split}
+                \pr{X=2} &= {^4C_2}(\frac{1}{2})^4\\
+                &=6.\frac{1}{16}\\
+                &=\frac{3}{8}
+            \end{split}
+        \end{align}
+
+    \item probability of getting 3 tails,
+        \begin{align}
+            \begin{split}
+                \pr{X=3} &= {^4C_3}(\frac{1}{2})^4\\
+                &=4.\frac{1}{16}\\
+                &=\frac{1}{4}
+            \end{split}
+        \end{align}
+
+\item probability of getting 4 tails,
+        \begin{align}
+            \begin{split}
+                \pr{X=4} &= {^4C_4}(\frac{1}{2})^4\\
+                &=1.\frac{1}{16}\\
+                &=\frac{1}{16}
+            \end{split}
+        \end{align}
+\end{enumerate}
 
 \begin{figure}[h!]
     \centering
@@ -412,23 +439,5 @@ probability of getting 2 tails,
     \caption{Plot of probability distribution of four tossed coins}
     \label{fig:Four coins}
 \end{figure}
-
-probability of getting 3 tails,
-\begin{align}
-    \begin{split}
-    \pr{X=3} &= {^4C_3}(\frac{1}{2})^4\\
-    &=4.\frac{1}{16}\\
-    &=\frac{1}{4}
-    \end{split}
-\end{align}
-
-probability of getting 4 tails,
-\begin{align}
-    \begin{split}
-    \pr{X=4} &= {^4C_4}(\frac{1}{2})^4\\
-    &=1.\frac{1}{16}\\
-    &=\frac{1}{16}
-    \end{split}
-\end{align}
-
+\end{enumerate}
 \end{document}
