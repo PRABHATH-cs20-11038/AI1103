@@ -1,9 +1,10 @@
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 
 \usepackage{setspace}
-\usepackage{gensymb}
+\usepackage{textcomp,gensymb}
 \singlespacing
 \usepackage[cmex10]{amsmath}
+\usepackage{enumerate}
 \usepackage{amsmath}
 
 \usepackage{amsthm}
@@ -14,23 +15,25 @@
 \usepackage{bm}
 \usepackage{cite}
 \usepackage{cases}
-\usepackage{subfig}
+\usepackage[caption=false]{subfig}
 
 \usepackage{longtable}
 \usepackage{multirow}
 
-\usepackage{enumitem}
+
+
 \usepackage{mathtools}
 \usepackage{steinmetz}
 \usepackage{tikz}
-\usepackage{circuitikz}
+
+
 \usepackage{verbatim}
 \usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{graphicx}
 \usepackage{tkz-euclide}
 \usepackage[rightcaption]{sidecap}
-\usepackage{enumerate}
+
 
 \usepackage{graphicx} 
 \graphicspath{ {images/} }
@@ -190,14 +193,12 @@ with using the fact that $X_i$ are i.i.d.,
 \end{align}
 
 \begin{enumerate}[(i)]
+    \item Here we are seeing outcome of two tosses of a coin. We can     say it as simultaneous tossing two coins. So, we get,
+        \begin{align}
+            n=2
+        \end{align}
 
-\item
-Here we are seeing outcome of two tosses of a coin. We can say it as simultaneous tossing two coins. So, we get,
-\begin{align}
-    n=2
-\end{align}
-
-This is the \textbf{special case} with equation (2.0.6) with $n=2$.
+    This is the \textbf{special case} with equation (2.0.6) with $n=2$.
 
 Now we obtain probability distribution of number of heads of two coins from (2.0.6),
 
@@ -249,13 +250,6 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\linewidth]{Table_1.png}
-    \caption{Table of probability distribution number of heads with two tossed coins}
-    \label{fig:Table_1}
-\end{figure}
-
-\begin{figure}[h!]
-    \centering
     \includegraphics[width=\linewidth]{Figure_1.png}
     \caption{Plot of probability distribution of two tossed coins}
     \label{fig:Two coins}
@@ -303,13 +297,6 @@ Now we obtain probability distribution of number of tails of three coins from (2
     0 \quad& otherwise
   \end{cases*}
 \end{align}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\linewidth]{Table_2.png}
-    \caption{Table of probability distribution of no of tails with three tossed coins}
-    \label{fig:Table_2}
-\end{figure}
 
 \begin{enumerate}[(a)]
 \item probability of getting 0 tails,
@@ -385,13 +372,6 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
   \end{cases*}
 \end{align}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\linewidth]{Table_3.png}
-    \caption{Table of probability distribution of number of heads with four tossed coins}
-    \label{fig:Table_3}
-\end{figure}
-
 \begin{enumerate}[(a)]
     \item probability of getting 0 heads,
         \begin{align}
@@ -446,4 +426,12 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \label{fig:Four coins}
 \end{figure}
 \end{enumerate}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Table.png}
+    \caption{Table of probability distribution tossed coins}
+    \label{fig:Table}
+\end{figure}
+
 \end{document}
