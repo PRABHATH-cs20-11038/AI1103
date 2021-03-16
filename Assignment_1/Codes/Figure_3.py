@@ -21,7 +21,37 @@ probabilityhead_4=special.binom(n, 4)*(p)**n
 x1 = [0, 1, 2, 3, 4]
 y1 = [probabilityhead_0, probabilityhead_1, probabilityhead_2, probabilityhead_3, probabilityhead_4]
 
-plt.bar(x1, y1, label="probability of no. of heads", color='r')
+
+
+#simulation practically
+z=0
+heads0=0
+heads1=0
+heads2=0
+heads3=0
+heads4=0
+ 
+while z<100000: #simlen
+     num=[]
+     for i in range(0,4):
+           num.append(randint(0,1))
+     value=num.count(1)
+     if value==0:
+          heads0+=1
+     elif value==1:
+          heads1+=1
+     elif value==2:
+          heads2+=1
+     elif value==3:
+          heads3+=1
+     elif value==4:
+          heads4+=1
+     z=z+1
+
+y2 = [heads0/z,heads1/z,heads2/z,heads3/z,heads4/z]
+#plotting of graph
+plt.bar(x1, y1, label="Theoretical solution", color='r')
+plt.plot(x1, y2, label="Practical soltion")
 plt.plot()
 
 plt.xlabel("number of heads")
