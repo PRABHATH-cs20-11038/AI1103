@@ -52,14 +52,14 @@
 
 \renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{sub-subsection}}
 
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
-\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{sub-subsection}}
 
 
-\hyphenation{op-tical net-works semi-conduc-tor}
+\hyphenation{op-ti-cal net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
 
 \lstset{
@@ -204,7 +204,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \begin{align*}
    \pr{X=k} =
   \begin{cases*}
-    {^2 C_k}\left(\frac{1}{2}\right)^{k}\left(1-\frac{1}{2}\right)^{2-k} & $0 \leq k \leq 2$\\
+    {^2 C_k}\brak{\frac{1}{2}}^{k}\brak{1-\frac{1}{2}}^{2-k} & $0 \leq k \leq 2$\\
     0 & otherwise
   \end{cases*}
 \end{align*}
@@ -212,7 +212,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \begin{align}
    \pr{X=k} =
   \begin{cases*}
-    {^2 C_k}\left(\frac{1}{2}\right)^{2} \quad& if $0 \leq k \leq 2$ \\
+    {^2 C_k}\brak{\frac{1}{2}}^{2} \quad& if $0 \leq k \leq 2$ \\
     0 \quad& otherwise
   \end{cases*}
 \end{align}
@@ -222,7 +222,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 0 heads,
         \begin{align}
             \begin{split}
-                \pr{X=0} &= {^2C_0}\left(\frac{1}{2}\right)^2\\
+                \pr{X=0} &= {^2C_0}\brak{\frac{1}{2}}^2\\
                 &=1.\frac{1}{4}\\
                 &=\frac{1}{4}
             \end{split}
@@ -231,7 +231,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 1 heads,
         \begin{align}
             \begin{split}
-                \pr{X=1} &= {^2C_1}\left(\frac{1}{2}\right)^2\\
+                \pr{X=1} &= {^2C_1}\brak{\frac{1}{2}}^2\\
                 &=2.\frac{1}{4}\\
                 &=\frac{1}{2}
             \end{split}
@@ -240,7 +240,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 2 heads,
         \begin{align}
             \begin{split}
-                \pr{X=2} &= {^2C_2}\left(\frac{1}{2}\right)^2\\
+                \pr{X=2} &= {^2C_2}\brak{\frac{1}{2}}^2\\
                 &=1.\frac{1}{4}\\
                 &=\frac{1}{4}
             \end{split}
@@ -291,7 +291,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \begin{align*}
    \pr{X'=k} =
   \begin{cases*}
-    {^3 C_k}\left(\frac{1}{2}\right)^{k}\left(1-\frac{1}{2}\right)^{3-k} & $0 \leq k \leq 3$\\
+    {^3 C_k}\brak{\frac{1}{2}}^{k}\brak{1-\frac{1}{2}}^{3-k} & $0 \leq k \leq 3$\\
     0 & otherwise
   \end{cases*}
 \end{align*}
@@ -299,7 +299,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \begin{align}
    \pr{X'=k} =
   \begin{cases*}
-    {^3 C_k}\left(\frac{1}{2}\right)^{3} \quad& if $0 \leq k \leq 3$ \\
+    {^3 C_k}\brak{\frac{1}{2}}^{3} \quad& if $0 \leq k \leq 3$ \\
     0 \quad& otherwise
   \end{cases*}
 \end{align}
@@ -315,7 +315,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \item probability of getting 0 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=0} &= {^3C_0}\left(\frac{1}{2}\right)^3\\
+            \pr{X'=0} &= {^3C_0}\brak{\frac{1}{2}}^3\\
             &=1.\frac{1}{8}\\
             &=\frac{1}{8}
         \end{split}
@@ -324,7 +324,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \item probability of getting 1 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=1} &= {^3C_1}\left(\frac{1}{2}\right)^3\\
+            \pr{X'=1} &= {^3C_1}\brak{\frac{1}{2}}^3\\
             &=3.\frac{1}{8}\\
             &=\frac{3}{8}
         \end{split}
@@ -333,7 +333,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \item probability of getting 2 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=2} &= {^3C_2}\left(\frac{1}{2}\right)^3\\
+            \pr{X'=2} &= {^3C_2}\brak{\frac{1}{2}}^3\\
             &=3.\frac{1}{8}\\
             &=\frac{3}{8}
         \end{split}
@@ -342,7 +342,7 @@ Now we obtain probability distribution of number of tails of three coins from (2
 \item probability of getting 3 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=3} &= {^3C_3}\left(\frac{1}{2}\right)^3\\
+            \pr{X'=3} &= {^3C_3}\brak{\frac{1}{2}}^3\\
             &=1.\frac{1}{8}\\
             &=\frac{1}{8}
         \end{split}
@@ -372,7 +372,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \begin{align*}
    \pr{X=k} =
   \begin{cases*}
-    {^4 C_k}\left(\frac{1}{2}\right)^{k}\left(1-\frac{1}{2}\right)^{4-k} & $0 \leq k \leq 4$\\
+    {^4 C_k}\brak{\frac{1}{2}}^{k}\brak{1-\frac{1}{2}}^{4-k} & $0 \leq k \leq 4$\\
     0 & otherwise
   \end{cases*}
 \end{align*}
@@ -380,7 +380,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \begin{align}
    \pr{X=k} =
   \begin{cases*}
-    {^4 C_k}\left(\frac{1}{2}\right)^{4} \quad& if $0 \leq k \leq 4$ \\
+    {^4 C_k}\brak{\frac{1}{2}}^{4} \quad& if $0 \leq k \leq 4$ \\
     0 \quad& otherwise
   \end{cases*}
 \end{align}
@@ -396,7 +396,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 0 heads,
         \begin{align}
             \begin{split}
-                \pr{X=0} &= {^4C_0}\left(\frac{1}{2}\right)^4\\
+                \pr{X=0} &= {^4C_0}\brak{\frac{1}{2}}^4\\
                 &=1.\frac{1}{16}\\
                 &=\frac{1}{16}
             \end{split}
@@ -405,7 +405,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 1 heads,
         \begin{align}
             \begin{split}
-                \pr{X=1} &= {^4C_1}\left(\frac{1}{2}\right)^4\\
+                \pr{X=1} &= {^4C_1}\brak{\frac{1}{2}}^4\\
                 &=4.\frac{1}{16}\\
                 &=\frac{1}{4}
             \end{split}
@@ -414,7 +414,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 2 heads,
         \begin{align}
             \begin{split}
-                \pr{X=2} &= {^4C_2}\left(\frac{1}{2}\right)^4\\
+                \pr{X=2} &= {^4C_2}\brak{\frac{1}{2}}^4\\
                 &=6.\frac{1}{16}\\
                 &=\frac{3}{8}
             \end{split}
@@ -423,7 +423,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
     \item probability of getting 3 heads,
         \begin{align}
             \begin{split}
-                \pr{X=3} &= {^4C_3}\left(\frac{1}{2}\right)^4\\
+                \pr{X=3} &= {^4C_3}\brak{\frac{1}{2}}^4\\
                 &=4.\frac{1}{16}\\
                 &=\frac{1}{4}
             \end{split}
@@ -432,7 +432,7 @@ Now we obtain probability distribution of number of heads of two coins from (2.0
 \item probability of getting 4 heads,
         \begin{align}
             \begin{split}
-                \pr{X=4} &= {^4C_4}\left(\frac{1}{2}\right)^4\\
+                \pr{X=4} &= {^4C_4}\brak{\frac{1}{2}}^4\\
                 &=1.\frac{1}{16}\\
                 &=\frac{1}{16}
             \end{split}
