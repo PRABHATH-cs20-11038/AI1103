@@ -224,7 +224,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=0} &= {^2C_0}\brak{\frac{1}{2}}^2\\
-                &=1.\frac{1}{4}\\
                 &=\frac{1}{4}
             \end{split}
         \end{align}
@@ -233,7 +232,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=1} &= {^2C_1}\brak{\frac{1}{2}}^2\\
-                &=2.\frac{1}{4}\\
                 &=\frac{1}{2}
             \end{split}
         \end{align}
@@ -242,7 +240,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=2} &= {^2C_2}\brak{\frac{1}{2}}^2\\
-                &=1.\frac{1}{4}\\
                 &=\frac{1}{4}
             \end{split}
         \end{align}
@@ -255,22 +252,31 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
     \label{fig:Two coins}
 \end{figure}
 
+\vspace{0.2in}
+
 \item
-
-Let $X'_i=1-X_i$, where in $X'_i \in {0,1}$ here 1 denotes outcome as tail.
-
 This is the \textbf{special case} with equation \eqref{eq1} with $n=3$ and complement of $X_i$.
 
-With respect to tails the parameter would change to 
+For $n$ coins if we want $k$ tails then remaining should be heads,
+
+Probability of getting k tails
 \begin{align}
-    q=1-p=\frac{1}{2}
+     =\pr{X=n-k}
 \end{align}
 
 and there will be a small change in binomial distribution (2.0.6) and we get binomial distribution for tails as,
-\begin{align}\label{eq2}
-   \pr{X'=k} =
+\begin{align}
+   \pr{X=n-k} =
   \begin{cases*}
-    {^n C_k}q^{k}(1-q)^{n-k} & $0 \leq k \leq n$\\
+    {^n C_k}(p)^{k}(1-p)^{n-k} & $0 \leq k \leq n$\\
+      0 & otherwise
+  \end{cases*}
+\end{align}
+
+\begin{align}\label{eq2}
+   \pr{X=k} =
+  \begin{cases*}
+    {^n C_k}(p)^{n-k}(1-p)^{k} & $0 \leq k \leq n$\\
       0 & otherwise
   \end{cases*}
 \end{align}
@@ -283,15 +289,15 @@ Here we are seeing outcome of simultaneous tosses of three coin. So, we get,
 Now we obtain probability distribution of number of tails of three coins from \eqref{eq2},
 
 \begin{align*}
-   \pr{X'=k} =
+   \pr{X=k} =
   \begin{cases*}
-    {^3 C_k}\brak{\frac{1}{2}}^{k}\brak{1-\frac{1}{2}}^{3-k} & $0 \leq k \leq 3$\\
+    {^3 C_k}\brak{\frac{1}{2}}^{3-k}\brak{1-\frac{1}{2}}^{k} & $0 \leq k \leq 3$\\
     0 & otherwise
   \end{cases*}
 \end{align*}
 
 \begin{align}
-   \pr{X'=k} =
+   \pr{X=k} =
   \begin{cases*}
     {^3 C_k}\brak{\frac{1}{2}}^{3} \quad& if $0 \leq k \leq 3$ \\
     0 \quad& otherwise
@@ -302,8 +308,7 @@ Now we obtain probability distribution of number of tails of three coins from \e
 \item probability of getting 0 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=0} &= {^3C_0}\brak{\frac{1}{2}}^3\\
-            &=1.\frac{1}{8}\\
+            \pr{X=0} &= {^3C_0}\brak{\frac{1}{2}}^3\\
             &=\frac{1}{8}
         \end{split}
     \end{align}
@@ -311,8 +316,7 @@ Now we obtain probability distribution of number of tails of three coins from \e
 \item probability of getting 1 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=1} &= {^3C_1}\brak{\frac{1}{2}}^3\\
-            &=3.\frac{1}{8}\\
+            \pr{X=1} &= {^3C_1}\brak{\frac{1}{2}}^3\\
             &=\frac{3}{8}
         \end{split}
     \end{align}
@@ -320,8 +324,7 @@ Now we obtain probability distribution of number of tails of three coins from \e
 \item probability of getting 2 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=2} &= {^3C_2}\brak{\frac{1}{2}}^3\\
-            &=3.\frac{1}{8}\\
+            \pr{X=2} &= {^3C_2}\brak{\frac{1}{2}}^3\\
             &=\frac{3}{8}
         \end{split}
     \end{align}
@@ -329,8 +332,7 @@ Now we obtain probability distribution of number of tails of three coins from \e
 \item probability of getting 3 tails,
     \begin{align}
         \begin{split}
-            \pr{X'=3} &= {^3C_3}\brak{\frac{1}{2}}^3\\
-            &=1.\frac{1}{8}\\
+            \pr{X=3} &= {^3C_3}\brak{\frac{1}{2}}^3\\
             &=\frac{1}{8}
         \end{split}
     \end{align}
@@ -342,8 +344,6 @@ Now we obtain probability distribution of number of tails of three coins from \e
     \caption{Plot of probability distribution of no of tails with three tossed coins}
     \label{fig:Three coins}
 \end{figure}
-
-
 
 \item
 
@@ -377,7 +377,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=0} &= {^4C_0}\brak{\frac{1}{2}}^4\\
-                &=1.\frac{1}{16}\\
                 &=\frac{1}{16}
             \end{split}
         \end{align}
@@ -386,7 +385,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=1} &= {^4C_1}\brak{\frac{1}{2}}^4\\
-                &=4.\frac{1}{16}\\
                 &=\frac{1}{4}
             \end{split}
         \end{align}
@@ -395,7 +393,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=2} &= {^4C_2}\brak{\frac{1}{2}}^4\\
-                &=6.\frac{1}{16}\\
                 &=\frac{3}{8}
             \end{split}
         \end{align}
@@ -404,7 +401,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=3} &= {^4C_3}\brak{\frac{1}{2}}^4\\
-                &=4.\frac{1}{16}\\
                 &=\frac{1}{4}
             \end{split}
         \end{align}
@@ -413,7 +409,6 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
         \begin{align}
             \begin{split}
                 \pr{X=4} &= {^4C_4}\brak{\frac{1}{2}}^4\\
-                &=1.\frac{1}{16}\\
                 &=\frac{1}{16}
             \end{split}
         \end{align}
@@ -427,6 +422,8 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
 \end{figure}
 \end{enumerate}
 
+\vspace{2in}
+
 \begin{table}[h!]
 \centering
 \caption{Table}
@@ -437,7 +434,7 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
     \hline
     $(i)$ & 2 & $\pr{X=k} (heads)$ & $1/2$& $1/4$ & $1/2$ & $0$ & $0$\\
     \hline
-    $(ii)$ & 3 & $\pr{X'=k} (tails)$ & $1/8$ & $3/8$ & $3/8$ & $1/8$ & $0$\\
+    $(ii)$ & 3 & $\pr{X=k} (tails)$ & $1/8$ & $3/8$ & $3/8$ & $1/8$ & $0$\\
     \hline
     $(iii)$ & 4 & $\pr{X=k} (heads)$ & $1/16$& $1/4$ & $3/8$ & $1/4$ & $1/16$\\
     \hline
