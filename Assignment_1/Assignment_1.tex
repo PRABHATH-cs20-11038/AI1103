@@ -212,21 +212,12 @@ with using the fact that $X_i$ are i.i.d.,
 \end{table}
 
 \begin{enumerate}[(i)]
-    \item Here we are seeing outcome of two tosses of a coin. We can     say it as simultaneous tossing two coins. So, we get,
+    \item Two coins. So,
         \begin{align}
             n=2
         \end{align}
 
-    This is the \textbf{special case} with equation \eqref{eq1} with $n=2$.
-
-Now we obtain probability distribution of number of heads of two coins from \eqref{eq1},
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\linewidth]{Figure_1.png}
-    \caption{Plot of probability distribution of two tossed coins}
-    \label{fig:Two coins}
-\end{figure}
+     from \eqref{eq1},
 
 \begin{align}
    \pr{X=k} =
@@ -236,19 +227,17 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
   \end{cases*}
 \end{align}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Figure_1.png}
+    \caption{Plot of probability distribution of two tossed coins}
+    \label{fig:Two coins}
+\end{figure}
+
 \vspace{0.2in}
 
-\item
-This is the \textbf{special case} with equation \eqref{eq1} with $n=3$ and complement of $X_i$.
+\item To get probability of tails,
 
-For $n$ coins if we want $k$ tails then remaining should be heads,
-
-Probability of getting k tails
-\begin{align}
-     =\pr{X=n-k}
-\end{align}
-
-and there will be a small change in binomial distribution (2.0.6) and we get binomial distribution for tails as,
 \begin{align}
    \pr{X=n-k} =
   \begin{cases*}
@@ -265,12 +254,12 @@ and there will be a small change in binomial distribution (2.0.6) and we get bin
   \end{cases*}
 \end{align}
 
-Here we are seeing outcome of simultaneous tosses of three coin. So, we get,
+Three coins. So,
 \begin{align}
     n=3
 \end{align}
 
-Now we obtain probability distribution of number of tails of three coins from \eqref{eq2},
+ from \eqref{eq2},
 
 \begin{align}
    \pr{X=k} =
@@ -287,16 +276,19 @@ Now we obtain probability distribution of number of tails of three coins from \e
     \label{fig:Three coins}
 \end{figure}
 
-\item
-
-Here we are seeing outcome of four tosses of a coin. We can say it as simultaneous tossing four coins. So, we get,
+\item Four coins. So,
 \begin{align}
     n=4
 \end{align}
 
-This is the \textbf{special case} with equation \eqref{eq1} with $n=4$.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Figure_3.png}
+    \caption{Plot of probability distribution of four tossed coins}
+    \label{fig:Four coins}
+\end{figure}
 
-Now we obtain probability distribution of number of heads of two coins from \eqref{eq1},
+ from \eqref{eq1},
 
 \begin{align}
    \pr{X=k} =
@@ -306,14 +298,7 @@ Now we obtain probability distribution of number of heads of two coins from \eqr
   \end{cases*}
 \end{align}
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\linewidth]{Figure_3.png}
-    \caption{Plot of probability distribution of four tossed coins}
-    \label{fig:Four coins}
-\end{figure}
-\end{enumerate}
 
-\vspace{2in}
+\end{enumerate}
 
 \end{document}
