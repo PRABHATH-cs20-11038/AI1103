@@ -4,30 +4,22 @@ from scipy.stats import bernoulli
 from scipy.stats import norm
 from scipy.stats import binom
 from scipy import special
+from random import randint
 
-#parameter
-q=1/2
+#sample size
+simlen=10000
 
-#no of tossed coins
-n=3
+#Posible outcomes
+n=(0,4)
 
-#probabilty
-probabilityhead_0=special.binom(n, 0)*(q)**n
-probabilityhead_1=special.binom(n, 1)*(q)**n
-probabilityhead_2=special.binom(n, 2)*(q)**n
-probabilityhead_3=special.binom(n, 3)*(q)**n
-
-x1 = [0, 1, 2,3]
-y1 = [probabilityhead_0, probabilityhead_1, probabilityhead_2, probabilityhead_3]
-
-#simulation practically
+#simulation
 z=0
 tails0=0
 tails1=0
 tails2=0
 tails3=0
  
-while z<100000: #simlen
+while z<simlen:
      num=[]
      for i in range(0,3):
            num.append(randint(0,1))
@@ -42,14 +34,22 @@ while z<100000: #simlen
           tails3+=1
      z=z+1
 
-y2 = [tails0/z,tails1/z,tails2/z,tails3/z]
-#plotting of graph
-plt.bar(x1, y1, label="Theoretical solution", color='g')
-plt.plot(x1, y2, label="Practical soltion")
-plt.plot()
+#Simulated probability
+psim=[tails0/simlen,tails1/simlen,tails2/simlen,tails3/simlen]
 
-plt.xlabel("number of tails")
-plt.ylabel("Probality")
+#Theoretical probability
+n = range(0,4)
+probabilitytails_0=special.binom(3, 0)*(1/2)**3
+probabilitytails_1=special.binom(3, 1)*(1/2)**3
+probabilitytails_2=special.binom(3, 2)*(1/2)**3
+probabilitytails_3=special.binom(3, 3)*(1/2)**3
+panal = np.concatenate((probabilitytails_0,probabilitytails_1,probabilitytails_2,probabilitytails_3),axis=None)
+
+#Plotting
+plt.stem(n,psim, markerfmt='o', use_line_collection=True, label='Simulation')
+plt.stem(n,panal, markerfmt='o',use_line_collection=True, label='Analysis')
+plt.xlabel('number of tails')
+plt.ylabel('Probabilty')
 plt.title("Probability distribution of number of tails with three tossing coins")
 plt.legend()
-plt.show()
+plt.grid()
