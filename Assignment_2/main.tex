@@ -1,0 +1,404 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{textcomp,gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage[caption=false]{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+
+
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+
+
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage[rightcaption]{sidecap}
+
+
+\usepackage{graphicx} 
+\graphicspath{ {images/} }
+
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+
+
+\DeclareMathOperator*{\Res}{Res}
+\DeclareUnicodeCharacter{2212}{-}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{sub-subsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{sub-subsection}}
+
+
+\hyphenation{op-ti-cal net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 2}
+\author{Prabhath Chellingi - CS20BTECH11038}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Download all python codes from 
+\begin{lstlisting}
+
+\end{lstlisting}
+
+and latex-tikz codes from
+\begin{lstlisting}
+
+\end{lstlisting}
+
+\section{Problem}
+
+$(GATE-EC-66)$ Consider two identical boxes $B_1$ and $B_2$, where the box $B_i(i = 1, 2)$ contains $i + 2$ red and $5−i−1$ white balls. A fair die is cast. Let the number of dots shown on the top face of the die be $N$. If $N$ is even or $5$, then two balls are drawn with replacement from the box $B_1$, otherwise, two balls are drawn with replacement from the box $B_2$. The probability that the two drawn balls are of different colours is
+
+\begin{enumerate}[(A)]
+    \item $\frac{7}{25}$ \\
+    
+    \item $\frac{9}{25}$ \\
+    
+    \item $\frac{12}{25}$ \\
+    
+    \item $\frac{16}{25}$
+\end{enumerate}
+
+\section{Solution}
+
+Let $X \in \{1,2,3,4,5,6\}$ be the random variables representing the outcome for a die. The $PDF$ of die is
+
+\begin{align}
+    \pr{X=N} =
+    \begin{cases}
+    \frac{1}{6} & 1 \leq N \leq 6\\
+    0 & otherwise
+    \end{cases}
+\end{align}
+where $N$ = the number on top face of the die.
+
+\vspace{0.2in}
+
+As we know
+\begin{align}\label{eq1}
+    \pr{X=m}.\pr{X=n}=0
+\end{align}
+for all $m,n \in \{1,2,3,4,5,6\}$ as a single die cannot show more than one outcome at a roll.
+\vspace{0.2in}
+
+Let $Y \in \{0, 1\}$ represent the die where $1$ denotes the die with outcome $N = \{2,4,5,6\}$ and $0$ denotes the remaining.
+
+\begin{multline}
+    \pr{Y=1}=\\
+    \pr{(X=2)+(X=4)+(X=5)+(X=6)}
+\end{multline}
+\newline
+
+by using \textit{Boolean logic} and equation \eqref{eq1}, we get,
+\begin{multline}
+    \pr{Y=1}=\\
+    \pr{X=2}+\pr{X=4}+\pr{X=5}+\pr{X=6}
+\end{multline}
+
+\begin{align}\label{eq2}
+    \begin{split}
+        \pr{Y=1}&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}\\
+        &=\frac{2}{3}
+    \end{split}
+\end{align}
+
+\begin{align}\label{eq3}
+    \begin{split}
+        \pr{Y=0}&=1-\pr{Y=1}\\
+        &=\frac{1}{3}
+    \end{split}
+\end{align}
+\newline
+
+let $C \in \{0,1\}$ where 0 denotes to red balls and 1 denotes to white balls.
+\newline
+
+There are two boxes $B_i(i = 1, 2)$ containing $i + 2$ red and $5−i−1$ white balls.
+
+\begin{enumerate}[(a)]
+\item
+number of red balls$(C=0)$ in $B_1$,
+\begin{align}
+    n(C=0|B_1)=(1)+2\\
+    n(C=0|B_1)=3
+\end{align}
+\item
+number of white balls$(C=1)$ in $B_1$,
+\begin{align}
+    n(C=1|B_1)=5-(1)-1\\
+    n(C=1|B_1)=3
+\end{align}
+\end{enumerate}
+
+number of balls in box $B_1$,
+\begin{align}
+    n(C|B_1)=n(C=0|B_1)+ n(C=1|B_1)\\
+    n(C|B_1)=6
+\end{align}
+
+\begin{enumerate}[(a)]
+\item 
+probability of selecting red ball from box $B_1$ is,
+\begin{align}
+\begin{split}
+    \pr{C=0|B_1}&=\frac{n(C=0|B_1)}{n(C=0|B_1)+ n(C=1|B_1)}\\
+    &=\frac{1}{2}
+\end{split}
+\end{align}
+\item
+probability of selecting white ball from box $B_1$ is,
+\begin{align}
+\begin{split}
+    \pr{C=1|B_1}&=\frac{n(C=1|B_1)}{n(C=0|B_1)+ n(C=1|B_1)}\\
+    &=\frac{1}{2}
+\end{split}
+\end{align}
+\end{enumerate}
+
+\begin{enumerate}[(a)]
+\item
+number of red balls$(C=0)$ in $B_2$,
+\begin{align}
+    n(C=0|B_2)=(2)+2\\
+    n(C=0|B_2)=4
+\end{align}
+\item
+number of white balls$(C=1)$ in $B_2$,
+\begin{align}
+    n(C=1|B_1)=5-(2)-1\\
+    n(C=1|B_1)=2
+\end{align}
+\end{enumerate}
+
+number of balls in box $B_2$,
+\begin{align}
+    n(C|B_2)=n(C=0|B_2)+ n(C=1|B_2)\\
+    n(C|B_1)=6
+\end{align}
+
+\begin{enumerate}[(a)]
+\item
+probability of selecting red ball from box $B_2$ is,
+\begin{align}
+\begin{split}
+    \pr{C=0|B_2}&=\frac{n(C=0|B_2)}{n(C=0|B_2)+ n(C=1|B_2)}\\
+    &=\frac{2}{3}
+\end{split}
+\end{align}
+\item
+probability of selecting white ball from box $B_2$ is,
+\begin{align}
+\begin{split}
+    \pr{C=1|B_2}&=\frac{n(C=1|B_2)}{n(C=0|B_2)+ n(C=1|B_2)}\\
+    &=\frac{1}{3}
+\end{split}
+\end{align}
+\end{enumerate}
+
+Given the probability of selecting box $B_1$ is same as $\pr{Y=1}$, from equation \eqref{eq2},
+\begin{align}
+    \pr{B_1}=\pr{Y=1}
+\end{align}
+
+\begin{align}\label{eq4}
+    \pr{B_1}=\frac{2}{3}
+\end{align}
+
+Given the probability of selecting box $B_2$ is same as $\pr{Y=0}$, from equation \eqref{eq3},
+\begin{align}
+    \pr{B_2}=\pr{Y=0}
+\end{align}
+
+\begin{align}\label{eq5}
+    \pr{B_2}=\frac{1}{3}
+\end{align}
+
+No of ways of selecting two different coloured balls is 
+\begin{enumerate}[(1)]
+    \item $(B_1,C=0,C=1)$
+    \item $(B_1,C=1,C=0)$
+    \item $(B_2,C=0,C=1)$
+    \item $(B_2,C=1,C=0)$
+\end{enumerate}
+
+\vspace{0.2in}
+
+The probability of second ball is not effected because the second ball is chose after replacement.
+\vspace{0.2in}
+
+Let $\pr{(C=0,C=1)|B_1}$ be probability of selecting two different coloured balls from Bag $B_1$.
+
+Probability of selecting two different colored balls from bag $B_1$ is, (by using Boolean logic)
+\begin{multline}
+    \pr{(C=0,C=1)|B_1}=\\
+    \pr{C=0|B_1}.\pr{C=1|B_1}+\\
+    \pr{C=1|B_1}.\pr{C=0|B_1}
+\end{multline}
+
+\begin{align}
+        \pr{(C=0,C=1)|B_1}=\frac{1}{2} \times\frac{1}{2}+\frac{1}{2}\times\frac{1}{2}
+\end{align}
+
+\begin{align}\label{eq6}
+    \pr{(C=0,C=1)|B_1}=\frac{1}{2}
+\end{align}
+
+Let $\pr{(C=0,C=1)|B_2}$ be probability of selecting two different coloured balls from Bag $B_2$.
+
+Probability of selecting two different colored balls from bag $B_2$ is, (by using Boolean logic)
+
+\begin{multline}
+    \pr{(C=0,C=1)|B_2}=\\
+    \pr{C=0|B_2}.\pr{C=1|B_2}+\\
+    \pr{C=1|B_2}.\pr{C=0|B_2}
+\end{multline}
+
+\begin{align}
+        \pr{(C=0,C=1)|B_2}=\frac{2}{3}\times\frac{1}{3}+\frac{1}{3}\times\frac{2}{3}
+\end{align}
+
+\begin{align}\label{eq7}
+    \pr{(C=0,C=1)|B_2}=\frac{4}{9}
+\end{align}
+\newline
+
+let probability of selecting two different coloured balls be $\pr{T}$ 
+\newline
+
+Now we can obtain $\pr{T}$ by using \textit{conditional probability} 
+\begin{align}\label{eq8}
+    \pr{E F}=\pr{E|F}.\pr{F}
+\end{align}
+
+\begin{multline}
+    \pr{T}=\\
+    \pr{((C=0,C=1)|B_1)(B_1)}+\\
+    pr{((C=0,C=1)|B_2)(B_2)}
+\end{multline}
+
+from equation \eqref{eq8}
+\begin{multline}
+    \pr{T}=\\
+    \pr{(C=0,C=1)|B_1}.\pr{B_1}+\\
+    \pr{(C=0,C=1)|B_2}.\pr{B_2}
+\end{multline}
+
+from \eqref{eq4}, \eqref{eq5}, \eqref{eq6}, \eqref{eq7},
+\begin{align}
+    \pr{T}=\brak{\frac{1}{2}}\brak{\frac{2}{3}}+\brak{\frac{4}{9}}\brak{\frac{1}{3}}\\
+    \pr{T}=\frac{13}{27}
+\end{align}
+
+\vspace{0.2in}
+
+Hence, the probability of selecting two different coloured balls from the bags is \[\frac{13}{27}\]
+
+\begin{lstlisting}
+Probability-
+    simulation: 0.48015,
+    actual: 0.48148148148148145
+\end{lstlisting}
+
+\end{document}
