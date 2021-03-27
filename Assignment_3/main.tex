@@ -156,7 +156,7 @@ $(GATE(MA) 2011-49Q))$ Let $X$ and $Y$ be two continuous random variables with t
     0, & elsewhere.
     \end{cases}
 \end{align}
-$E\brak{X | Y=\frac{1}{2}}$ is
+$E\brak{X \mid Y=\frac{1}{2}}$ is
 \begin{enumerate}[(A)]
     \item $1/4$
     \item $1/2$
@@ -189,10 +189,10 @@ The PDF of $X$ and $Y$ is,
 \end{align}
 by using Bayes theorem,
 \begin{align}
-    f\brak{X | Y=\frac{1}{2}}=\frac{f\brak{x,\frac{1}{2}}}{f_Y\brak{\frac{1}{2}}}
+    f_{X\mid Y}\brak{x\mid\frac{1}{2}}=\frac{f_{X,Y}\brak{x,\frac{1}{2}}}{f_Y\brak{\frac{1}{2}}}
 \end{align}
 \begin{align}
-    f\brak{X|Y=\frac{1}{2}}=
+    f_{X\mid Y}\brak{x\mid\frac{1}{2}}=
     \begin{cases}
     2, & 0<x<\frac{1}{2},\\
     0, & elsewhere.
@@ -208,19 +208,19 @@ by using Bayes theorem,
 
 It is in the form of Bernoulli distribution, the expectation value is given by,
 \begin{align}
-    E\brak{X|Y=\frac{1}{2}}=\sum\limits_{-\infty}^{\infty}k f\brak{X=k|Y=\frac{1}{2}}
+    E\brak{X\mid Y=\frac{1}{2}}=\sum\limits_{-\infty}^{\infty}x f_{X\mid Y}\brak{x\mid\frac{1}{2}}
 \end{align}
 \begin{align}
-    E\brak{X|Y=\frac{1}{2}}=\int\limits_{-\infty}^0x(0)d x + \int\limits_0^\frac{1}{2}x(2)d x + \int\limits^{-\infty}_0x(0)d x
+    E\brak{X\mid Y=\frac{1}{2}}=\int\limits_{-\infty}^0x(0)d x + \int\limits_0^\frac{1}{2}x(2)d x + \int\limits^{-\infty}_0x(0)d x
 \end{align}
 \begin{align}
-    E\brak{X|Y=\frac{1}{2}}=\int\limits_0^\frac{1}{2}2x d x
+    E\brak{X\mid Y=\frac{1}{2}}=\int\limits_0^\frac{1}{2}2x d x
 \end{align}
 \begin{align}
-    E\brak{X|Y=\frac{1}{2}}=\frac{1}{4}
+    E\brak{X\mid Y=\frac{1}{2}}=\frac{1}{4}
 \end{align}
 
-\textbf{Option (A)} is correct.
+Option (A) is correct.
 \begin{lstlisting}
 Expected Value-
       simulated: 0.25008392175344957,
