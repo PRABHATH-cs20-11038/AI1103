@@ -165,11 +165,19 @@ $E\brak{X | Y=\frac{1}{2}}$ is
 \end{enumerate}
 \section{Solution}
 
-We are checking at $y=\frac{1}{2}$,
+The PDF of $Y$ is,
 \begin{align}
-    \pr{Y=\frac{1}{2}}=1
+    f_Y(y)=\int\limits_{-\infty}^\infty f(x,y)d x
 \end{align}
-when $y=\frac{1}{2}$,
+\begin{align}
+    f_Y(y)=\int\limits_0^{1-y}2d x
+\end{align}
+\begin{align}
+    f_Y(y)=2-2y
+\end{align}
+\begin{align}
+    \pr{Y=\frac{1}{2}}=f_Y\brak{\frac{1}{2}}=1
+\end{align}
 \begin{align}
     \pr{\brak{X}\brak{Y=\frac{1}{2}}}=f\brak{x,\frac{1}{2}}=
     \begin{cases}
@@ -177,7 +185,6 @@ when $y=\frac{1}{2}$,
     0, & elsewhere.
     \end{cases}
 \end{align}
-
 by using Bayes theorem,
 \begin{align}
     \pr{X | Y=\frac{1}{2}}=\frac{\pr{\brak{X}\brak{Y=\frac{1}{2}}}}{\pr{Y=\frac{1}{2}}}
