@@ -165,32 +165,34 @@ $E\brak{X | Y=\frac{1}{2}}$ is
 \end{enumerate}
 \section{Solution}
 
-The PDF of $Y$ is,
+The PDF of $X$ and $Y$ is,
 \begin{align}
-    f_Y(y)=\int\limits_{-\infty}^\infty f(x,y)d x
+    f(X=x)=\int\limits_{-\infty}^\infty f(x,y)d y
 \end{align}
 \begin{align}
-    f_Y(y)=\int\limits_0^{1-y}2d x
+    f(X=x)=\int\limits_0^{1-x}2d y
 \end{align}
 \begin{align}
-    f_Y(y)=2-2y
+    f(X=x)=2-2x
 \end{align}
 \begin{align}
-    \pr{Y=\frac{1}{2}}=f_Y\brak{\frac{1}{2}}=1
+    f(Y=y)=\int\limits_{-\infty}^\infty f(x,y)d x
 \end{align}
 \begin{align}
-    \pr{\brak{X}\brak{Y=\frac{1}{2}}}=f\brak{x,\frac{1}{2}}=
-    \begin{cases}
-    2, & 0<x<\frac{1}{2},\\
-    0, & elsewhere.
-    \end{cases}
+    f(Y=y)=\int\limits_0^{1-y}2d x
+\end{align}
+\begin{align}
+    f(Y=y)=2-2y
+\end{align}
+\begin{align}
+    f\brak{Y=\frac{1}{2}}=1
 \end{align}
 by using Bayes theorem,
 \begin{align}
-    \pr{X | Y=\frac{1}{2}}=\frac{\pr{\brak{X}\brak{Y=\frac{1}{2}}}}{\pr{Y=\frac{1}{2}}}
+    f\brak{X | Y=\frac{1}{2}}=\frac{f\brak{x,\frac{1}{2}}}{f\brak{Y=\frac{1}{2}}}
 \end{align}
 \begin{align}
-    \pr{X|Y=\frac{1}{2}}=
+    f\brak{X|Y=\frac{1}{2}}=
     \begin{cases}
     2, & 0<x<\frac{1}{2},\\
     0, & elsewhere.
@@ -206,10 +208,10 @@ by using Bayes theorem,
 
 It is in the form of Bernoulli distribution, the expectation value is given by,
 \begin{align}
-    E\brak{X|Y=\frac{1}{2}}=\sum\limits_{-\infty}^{\infty}k\pr{X=k|Y=\frac{1}{2}}
+    E\brak{X|Y=\frac{1}{2}}=\sum\limits_{-\infty}^{\infty}k f\brak{X=k|Y=\frac{1}{2}}
 \end{align}
 \begin{align}
-    E\brak{X|Y=\frac{1}{2}}=\int\limits_0^\frac{1}{2}x(2)d x + \int\limits_{-\infty}^0x(0)d x + \int\limits^{-\infty}_0x(0)d x
+    E\brak{X|Y=\frac{1}{2}}=\int\limits_{-\infty}^0x(0)d x + \int\limits_0^\frac{1}{2}x(2)d x + \int\limits^{-\infty}_0x(0)d x
 \end{align}
 \begin{align}
     E\brak{X|Y=\frac{1}{2}}=\int\limits_0^\frac{1}{2}2x d x
