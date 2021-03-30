@@ -19,6 +19,7 @@
 
 \usepackage{longtable}
 \usepackage{multirow}
+\usepackage{multicol}
 
 
 
@@ -149,6 +150,7 @@ https://github.com/PRABHATH-cs20-11038/AI1103/tree/main/Assignment_5
 \section{Problem}
 
 $(GATE(EC)2013-26Q)$ Let $U$ and $V$ be two independent zero mean Gaussian random variables of variances $\frac{1}{4}$ and $\frac{1}{9}$ respectively. The probability $\pr{3V\geq2U }$ is
+
 \begin{enumerate}[(A)]
     \item $4/9$
     \item $1/2$
@@ -192,18 +194,19 @@ $PDF$ of $Z$,
     \caption{Plot of of distribution function}
     \label{fig:plot}
 \end{figure}
+
+Let $F_Z(z)$ be $CDF$ of $Z$,
 \begin{align}
-    \pr{Z\geq0}=\int\limits_0^{\infty}f_Z(z)dz
+    f_Z(z)=F_Z'(z)
 \end{align}
 \begin{align}
-    \pr{Z\geq0}=\frac{1}{2}\int\limits_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi}}e^{-\frac{z^2}{4}}dz
+    \pr{Z\geq0}=F_Z(0)
 \end{align}
+From the result,
 \begin{align}
-    \pr{Z\geq0}=\frac{1}{2}\frac{1}{2\sqrt{\pi}}\int\limits_{-\infty}^{\infty}e^{-\frac{z^2}{4}}dz
+    F_Z'(\mu)=\frac{1}{2}
 \end{align}
-\begin{align}
-    \pr{Z\geq0}=\frac{1}{2}\frac{1}{2\sqrt{\pi}}\brak{\sqrt{4\pi}}
-\end{align}
+Here for $Z$, $\mu=0$,
 \begin{align}
     \pr{Z\geq0}=\frac{1}{2}
 \end{align}
