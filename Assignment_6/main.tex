@@ -153,31 +153,11 @@ $(GATE(ME)2005-2Q)$ A lot has $10\%$ defective items. Ten items are chosen rando
 
 \section{Solution}
 
-Let $X_i \in \{0, 1\}$ represent the $i^{Th}$ item where $1$ denotes the item is defective. Then, $X_i$ has a Bernoulli distribution with parameter
+Probability of selecting items follows binomial distribution with parameter for selecting defective items,
 \begin{align}
-p = \frac{10}{100}=\frac{1}{10}
+    p=\frac{10}{100}=\frac{1}{10}
 \end{align}
-Let 
-\begin{align}
-X = \sum\limits_{i=1}^{n}X_i
-\end{align}
-Where $n$ is the total no. of items chosen. Then $X$ has a Binomial Distribution. Then for 
-\begin{align}
-    \pr{X_i=n} {\stackrel{Z}{\rightleftharpoons}} \pr{X_i=z}
-\end{align}
-Yielding
-\begin{align}
-    \pr{X_i=z} = 1-p+p z^{-1}
-\end{align}
-
-with using the fact that $X_i$ are $i.i.d.$,
-\begin{align}
-\begin{split}
-    \pr{X=z} &= (1-p+p z^{-1})^n\\
-    &=\sum\limits_{k=0}^n{^n C_k}p^k(1-p)^{n-k}z^{-k}
-\end{split}
-\end{align}
-The probability of getting $k$ defective items is,
+The probability of getting $k$ defective items by selecting $n$ items is,
 \begin{align}
    \pr{X=k} =
   \begin{cases}
@@ -189,7 +169,7 @@ Total no. of items chosen,
 \begin{align}
     n=10
 \end{align}
-Probability of getting exactly $2$ items defective,
+Probability of getting exactly $2$ defective items,
 \begin{align}
     \pr{X=2}={^{10} C_2}\brak{\frac{1}{10}}^{2}\brak{1-\frac{1}{10}}^{10-2}
 \end{align}
