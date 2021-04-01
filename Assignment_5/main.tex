@@ -161,15 +161,24 @@ $(GATE(EC)2013-26Q)$ Let $U$ and $V$ be two independent zero mean Gaussian rando
 \section{Solution}
 
 $U$ and $V$ are independent random variables,
+
+For $V$, $\mu_V=0$, and $\sigma_V^2=\frac{1}{9}$
 \begin{align}
     V\sim N\brak{0,\frac{1}{9}}
 \end{align}
+For $U$, $\mu_U=0$, and $\sigma_U^2=\frac{1}{4}$
 \begin{align}
     U\sim N\brak{0,\frac{1}{4}}
 \end{align}
 Let,
 \begin{align}
     Z=3V-2U
+\end{align}
+\begin{align}
+    Z\sim N\brak{3(\mu_V)-2(\mu_U), (3)^2\sigma_U^2+(2)^2\sigma_V^2}
+\end{align}
+\begin{align}
+    Z\sim N\brak{0,9\times\frac{1}{9}+4\times\frac{1}{4}}
 \end{align}
 \begin{align}
     Z\sim N\brak{0,9\times\frac{1}{9}+4\times\frac{1}{4}}
@@ -181,36 +190,23 @@ For $Z$, $\mu=0$, and $\sigma^2=2$.
 
 By Gaussian Distribution,
 
-$PDF$ of $Z$,
+Let $X$ is standard normal variable,
 \begin{align}
-    f_Z(z)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{\brak{z-\mu}^2}{2\sigma^2}}
+    X=\frac{Z-\mu}{\sigma}
 \end{align}
 \begin{align}
-    f_Z(z)=\frac{1}{2\sqrt{\pi}}e^{-\frac{z^2}{4}}
-\end{align}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\columnwidth]{Figure.png}
-    \caption{Plot of of distribution function}
-    \label{fig:plot}
-\end{figure}
-The $Q-function$ is,
-\begin{align}
-    Q(x)=\frac{1}{2}er f c\brak{\frac{x}{\sqrt{2}}}
+    \pr{Z\geq0}=\pr{X\sigma+\mu\geq0}
 \end{align}
 \begin{align}
-    \pr{Z\geq0}=Q(x)
-\end{align}
-where $x$ is standard normal variable,
-\begin{align}
-    x=\frac{z-\mu}{\sigma}
+    \pr{Z\geq0}=\pr{X\brak{\sqrt{2}}+0\geq0}
 \end{align}
 \begin{align}
-    x=\frac{0-0}{\sqrt{2}}=0
+    \pr{Z\geq0}=\pr{X\geq0}
 \end{align}
 \begin{align}
-    \pr{Z\geq0}=Q(0)
+    \pr{Z\geq0}=Q\brak{0}=\frac{1}{2}
 \end{align}
+where $Q(x)$ is the $Q-function$.
 \begin{align}
     \pr{Z\geq0}=\frac{1}{2}
 \end{align}
