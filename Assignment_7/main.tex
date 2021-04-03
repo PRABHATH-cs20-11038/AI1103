@@ -1,0 +1,265 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{textcomp,gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage[caption=false]{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage[rightcaption]{sidecap}
+
+\usepackage{graphicx} 
+\graphicspath{ {images/} }
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+
+\DeclareMathOperator*{\Res}{Res}
+\DeclareUnicodeCharacter{2212}{-}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{sub-subsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{sub-subsection}}
+
+\hyphenation{op-ti-cal net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+%\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\title{Assignment 7}
+\author{Prabhath Chellingi - CS20BTECH11038}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+Download latex-tikz codes from
+\begin{lstlisting}
+
+\end{lstlisting}
+
+\section{Problem}
+
+$(CSIR-UGC-NET\_EXAM (Dec-2016), Q.107)$ Let $X$ be a random variable with a certain non-degenerate distribution. Then identify the correct statements
+\begin{enumerate}[1.]
+    \item If $X$ has an exponential distribution then $median\brak{X}<E\brak{X}$
+    \item If $X$ has a uniform distribution on an interval $[a,b]$, then $E\brak{X}<median\brak{X}$
+    \item If $X$ has a Binomial distribution then $V\brak{X}<E\brak{X}$
+    \item If $X$ has a normal distribution, then $E\brak{X}<V\brak{X}$
+\end{enumerate}
+
+\section{Solution}
+\begin{enumerate}
+    \item Let's consider $X$ has an exponential distribution.
+    \begin{align}
+        X \sim Exp\brak{\lambda}
+    \end{align}
+    where $\lambda$ is rate parameter.
+    
+    Probability function of exponential distribution,
+    \begin{align}
+        f_X\brak{x}=
+        \begin{cases}
+            \lambda e^{-\lambda x} & x\geq0\\
+            0 & x<0
+        \end{cases}
+    \end{align}
+    The expected value of $X \sim Exp\brak{\lambda}$,
+    \begin{align}
+        E\brak{X}=\frac{1}{\lambda}
+    \end{align}
+    The median of $X \sim Exp\brak{\lambda}$,
+    \begin{align}
+        median\brak{X}=\frac{\ln{2}}{\lambda}
+    \end{align}
+    \begin{align}
+        \ln{2}<1\\
+        \frac{\ln{2}}{\lambda}<\frac{1}{\lambda}\\
+         median\brak{X}<E\brak{X}
+    \end{align}
+    Hence, option $1$ is correct.
+    
+    \item Let's consider $X$ has a uniform distribution in interval $[a,b]$,
+    \begin{align}
+        X \sim U\brak{a,b}
+    \end{align}
+    where,
+    $a=$ lower limit
+    
+    $b=$ upper limit
+    
+    Probability function of uniform distribution,
+    \begin{align}
+        f_X\brak{k}=
+        \begin{cases}
+            \frac{1}{b-a} & a\leq x\leq b\\
+            0 & x < a, x > b
+        \end{cases}
+    \end{align}
+    The expected value of $X \sim U\brak{a,b}$,
+    \begin{align}
+        E\brak{X}=\frac{1}{2}\brak{a+b}
+    \end{align}
+    The median of $X \sim U\brak{a,b}$,
+    \begin{align}
+        median\brak{X}=\frac{1}{2}\brak{a+b}
+    \end{align}
+    \begin{align}
+        E\brak{X}=median\brak{X}
+    \end{align}
+    Hence, option $2$ is incorrect.
+    
+    \item Let's consider $X$ has a binomial distribution,
+    \begin{align}
+        X \sim B\brak{n,p}
+    \end{align}
+    where,
+    $n=$ no. of trails
+    
+    $p=$ success parameter
+    
+    Probability function of binomial distribution,
+    \begin{align}
+        f_X\brak{k}=
+        \begin{cases}
+            {^n C_k}p^k(1-p)^{n-k} & 0\leq k\leq n\\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    The expected value of $X \sim B\brak{n,p}$,
+    \begin{align}
+        E\brak{X}=np
+    \end{align}
+    The variance of $X \sim B\brak{n,p}$,
+    \begin{align}
+        V\brak{X}=\sigma^2=n p(1-p)
+    \end{align}
+    \begin{align}
+        1-p\leq1\\
+        n p(1-p)\leq n p\\
+        V\brak{X}\leq E\brak{X}
+    \end{align}
+    Hence, option $3$ is incorrect.
+    
+    \item Let's consider $X$ has a normal distribution,
+    \begin{align}
+        X \sim N\brak{\mu,\sigma^2}
+    \end{align}
+    where,
+    $\mu=$ mean of distribution
+    
+    $\sigma^2=$ variance
+    
+    Probability function of normal distribution,
+    \begin{align}
+        f_X\brak{k}=\frac{1}{\sigma\sqrt{2\pi}}e^{-\brak{\frac{x-\mu}{2\sigma}}^2}
+    \end{align}
+    The expected value of $X \sim N\brak{\mu,\sigma^2}$,
+    \begin{align}
+        E\brak{X}=\mu
+    \end{align}
+    The variance of $X \sim N\brak{\mu,\sigma^2}$,
+    \begin{align}
+        V\brak{X}=\sigma^2
+    \end{align}
+    $E\brak{X}$ and $V\brak{X}$ are user defined. So, they can take any value.
+    
+    Hence, option $4$ is incorrect.
+\end{enumerate}
+
+\end{document}
