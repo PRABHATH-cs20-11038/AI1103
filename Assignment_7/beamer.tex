@@ -1,0 +1,262 @@
+\documentclass{beamer}
+\usepackage{listings}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetheme{Boadilla}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\usepackage{mathtools}
+
+\title{CSIR UGC NET EXAM(Dec 2016), Q.107}
+\author{Prabhath Chellingi - CS20BTECH11038}
+\date{}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Question}
+
+\begin{block}{}
+ Let $X$ be a random variable with a certain non-degenerate distribution. Then identify the correct statements
+\begin{enumerate}[1.]
+    \item If $X$ has an exponential distribution then $median(X)<E(X)$
+    \item If $X$ has a uniform distribution on an interval $[a,b]$, then $E(X)<median(X)$
+    \item If $X$ has a Binomial distribution then $V(X)<E(X)$
+    \item If $X$ has a normal distribution, then $E(X)<V(X)$
+\end{enumerate}
+\end{block}
+\end{frame}
+\begin{frame}{}
+    \begin{block}{Pre-requisites }
+    \begin{itemize}
+        \item Expected value
+        \item Variance
+        \item Median
+        \item Exponential Distribution
+        \item Uniform Distribution
+        \item Binomial Distribution
+        \item Normal Distribution
+    \end{itemize}
+    \end{block}
+\end{frame}
+\begin{frame}{}
+\begin{block}{Expected value}
+It is nothing but weighted mean
+
+Notation - $E(X)$, $\mu$
+\end{block}
+\begin{block}{Formula}
+\begin{align}
+    E(X)=\mu=\sum k\pr{X=k}
+\end{align}
+where \pr{X} is the probability function of a distribution.
+\end{block}
+\end{frame}
+\begin{frame}{}
+\begin{block}{Median}
+It is the value separating the higher half from the lower half of a data sample
+
+Notation - $median(X)$
+\end{block}
+\begin{block}{Formula}
+\begin{align}
+    \int\limits_{lower limit}^{median(X)}f(X)d x=\frac{1}{2}=\int\limits_{median(X)}^{upper limit}f(X)d x
+\end{align}
+We can find $median(X)$ by solving this equation,
+
+where $f(X)$ is the probability function.
+\end{block}
+\end{frame}
+\begin{frame}{}
+\begin{block}{Variance}
+It is the expectation of the squared deviation of a random variable from its mean.
+
+Notation - $V(X)$, $\sigma^2$
+\end{block}
+\begin{block}{Formula}
+\begin{align}
+    V(X)=\sigma^2=E((X-E(X))^2)=E(X^2)-(E(X))^2
+\end{align}
+\end{block}
+\end{frame}
+\begin{frame}{}
+    \begin{block}{Exponential Distribution}
+    It is a distribution in which events occur continuously and independently at a constant average rate
+    
+    Notation - $Exp(\lambda)$, where $\lambda$ is the rate parameter
+    \end{block}
+    \begin{block}{Probability function}
+    \begin{align}
+        f_X(x)=
+        \begin{cases}
+            \lambda e^{-\lambda x} & x\geq0\\
+            0 & x<0
+        \end{cases}
+    \end{align}
+    where $X$ is the random variable of the distribution.
+    \end{block}
+\end{frame}
+\begin{frame}{Option 1}
+    If $X$ has an exponential distribution then $median(X)<E(X)$
+\end{frame}
+\begin{frame}{Solution(Option 1)}
+    Let $X$ has exponential distribution
+    
+    The expected value of $X \sim Exp(\lambda)$,
+    \begin{align}
+        E(X)=\int\limits_0^{\infty}x\lambda e^{-\lambda x}d x\\
+        E(X)=\frac{1}{\lambda}
+    \end{align}
+    The median of $X \sim Exp(\lambda)$,
+    \begin{align}
+        \frac{1}{2}=\int\limits_0^{median(X)}\lambda e^{-\lambda x}d x\\
+        median(X)=\frac{\ln{2}}{\lambda}
+    \end{align}
+\end{frame}
+\begin{frame}{Solution(Option 1) Contd.}
+    \begin{align}
+        \ln{2}<1\\
+        \frac{\ln{2}}{\lambda}<\frac{1}{\lambda}\\
+         median(X)<E(X)
+    \end{align}
+    Hence, option $1$ is correct.
+\end{frame}
+\begin{frame}{}
+    \begin{block}{Uniform Distribution}
+     It is a distribution that describes an experiment where there is an arbitrary outcome that lies between certain bounds($[a,b]$)
+    
+    Notation - $U(a,b)$, where $[a,b]$ is the bounded region
+    \end{block}
+    \begin{block}{Probability function}
+    \begin{align}
+        f_X(k)=
+        \begin{cases}
+            \frac{1}{b-a} & a\leq x\leq b\\
+            0 & x < a, x > b
+        \end{cases}
+    \end{align}
+    where $X$ is the random variable of the distribution.
+    \end{block}
+\end{frame}
+\begin{frame}{Option 2}
+    If $X$ has a uniform distribution on an interval $[a,b]$, then $E(X)<median(X)$
+\end{frame}
+\begin{frame}{Solution(Option 2)}
+    Let $X$ has Uniform distribution
+    
+    The expected value of $X \sim U(a,b)$,
+    \begin{align}
+        E(X)=\int\limits_a^{b}x\frac{1}{b-a}d x\\
+        E(X)=\frac{1}{2}(a+b)
+    \end{align}
+    The median of $X \sim U(a,b)$,
+    \begin{align}
+        \frac{1}{2}=\int\limits_a^{median(X)}\frac{1}{b-a}d x\\
+        median(X)=\frac{a+b}{2}
+    \end{align}
+\end{frame}
+\begin{frame}{Solution(Option 2) Contd.}
+    \begin{align}
+        median(X)=E(X)
+    \end{align}
+    Hence, option $2$ is incorrect.
+\end{frame}
+\begin{frame}{}
+    \begin{block}{Binomial Distribution}
+     It is a distribution of the possible number of successful outcomes in a given number of trials in each of which there is the same probability of success.
+    
+    Notation - $B(n,p)$, where n = no. of trails, p = success parameter
+    \end{block}
+    \begin{block}{Probability function}
+    \begin{align}
+        f_X(k)=
+        \begin{cases}
+            {^n C_k}p^k(1-p)^{n-k} & 0\leq k\leq n\\
+            0 & otherwise
+        \end{cases}
+    \end{align}
+    where $X$ is the random variable of the distribution.
+    \end{block}
+\end{frame}
+\begin{frame}{Option 3}
+     $X$ has a Binomial distribution then $V(X)<E(X)$
+\end{frame}
+\begin{frame}{Solution(Option 3)}
+    Let $X$ has Binomial distribution
+    
+    The expected value of $X \sim B(n,p)$,
+    \begin{align}
+        E(X)=\sum\limits_{k=0}^{n}k.{^n C_k}p^k(1-p)^{n-k}\\
+        E(X)=n p
+    \end{align}
+    The variance of $X \sim B(n,p)$,
+    \begin{align}
+        V(X)=\sigma^2=E(X^2)-(E(X))^2\\
+        V(X)=\sum\limits_{k=0}^n k^2.{^n C_k}p^k(1-p)^{n-k}\\
+        V(X)=n p(1-p)
+    \end{align}
+\end{frame}
+\begin{frame}{Solution(Option 3) Contd.}
+    \begin{align}
+        1-p\leq1\\
+        n p(1-p)\leq n p\\
+        V(X)\leq E(X)
+    \end{align}
+    Hence, option $3$ is incorrect.
+\end{frame}
+\begin{frame}{}
+    \begin{block}{Normal Distribution}
+     It is a distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. 
+     
+     It is the more frequently used distribution.
+    
+    Notation - $N(\mu,\sigma^2)$, where $\mu = mean$, $\sigma^2 = variance$
+    \end{block}
+    \begin{block}{Probability function}
+    \begin{align}
+        f_X(k)=\frac{1}{\sigma\sqrt{2\pi}}e^{-(\frac{x-\mu}{2\sigma})^2}
+    \end{align}
+    where $X$ is the random variable of the distribution.
+    \end{block}
+\end{frame}
+\begin{frame}{Option 4}
+    $X$ has a normal distribution, then $E(X)<V(X)$
+\end{frame}
+\begin{frame}{Solution(Option 4)}
+    Let $X$ has Normal distribution
+    
+    The expected value of $X \sim N(\mu,\sigma^2)$,
+    \begin{align}
+        E(X)=\mu
+    \end{align}
+    The variance of $X \sim N(\mu,\sigma^2)$,
+    \begin{align}
+        V(X)=\sigma^2
+    \end{align}
+    These are user defined values.
+\end{frame}
+\begin{frame}{Solution(Option 4) Contd.}
+    So, $E(X)$ and $V(X)$ can take any value independent of each other.
+    
+    Hence, option $4$ is incorrect.
+\end{frame}
+
+\end{document}
